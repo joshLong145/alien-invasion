@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+//👾🛸
 type Alien struct {
 	Id        int
 	MoveCount int
@@ -113,7 +114,7 @@ func (w *World) checkForFights() {
 	for k, v := range w.Locations {
 		if len(v.Occupants) > 1 {
 			fmt.Printf("a fight has broken out at: %s\n", v.Name)
-
+			// check for neighbors and dereference
 			if w.Locations[k].East != nil {
 				w.Locations[k].East.West = nil
 			}
