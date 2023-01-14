@@ -20,7 +20,7 @@ func TestNewWorldCreateValid(t *testing.T) {
 		assert.Equal(t, len(world.Locations), 5)
 	})
 
-	t.Run("Should create world with 5 locations", func(t *testing.T) {
+	t.Run("Aliens created should equal inputed quantity", func(t *testing.T) {
 		world, err := world.NewWorld(FILE_PATH_VALID, 100)
 
 		assert.Nil(t, err)
