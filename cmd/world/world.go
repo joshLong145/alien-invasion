@@ -48,10 +48,13 @@ func NewWorld(path string, aliens int) (*World, error) {
 }
 
 func (w *World) Run() error {
-
+	// start the game loop
+	// ordering goes
+	// 1) move aliens to new locations
+	// 2) check for a fight at each
 	for w.shouldRun() {
-		w.checkForFights()
 		w.moveAliens()
+		w.checkForFights()
 	}
 
 	return nil
