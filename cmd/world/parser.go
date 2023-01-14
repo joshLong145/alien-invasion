@@ -68,6 +68,8 @@ func parseWorld(path string, w *World) error {
 				w.Locations[values[1]] = connect
 			}
 
+			//normalize the location assuming also only numeric characters
+			values[0] = strings.ToLower(values[0])
 			switch values[0] {
 			case "north":
 				loc.North = connect
